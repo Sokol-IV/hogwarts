@@ -1,26 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import MainScreen from "./components/MainScreen/MainScreen";
+import {BrowserRouter, Route, Router, Routes} from "react-router-dom";
+import FormAddDevice from "./pages/FormAddDevice/FormAddDevice";
+import Smth from "./pages/Smth/Smth";
+import {routingConstants} from "./Constans/routingConstants";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      <div className="container">
 
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          {/*<BrowserRouter>*/}
+              <Routes>
+                  <Route >
+                      <Route path={routingConstants.mainScreen} element={<MainScreen />} />
+                      <Route path={routingConstants.smth} element={<Smth />} ></Route>
+                      <Route path={routingConstants.formAddDevice} element={<FormAddDevice />} />
+                  </Route>
+              </Routes>
+              {/*</BrowserRouter>*/}
+      </div>
+  )
 }
 
 export default App;

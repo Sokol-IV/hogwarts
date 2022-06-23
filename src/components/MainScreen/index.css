@@ -1,0 +1,19 @@
+.title-main-screen {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-screen-button {
+    width: 150px;
+    height: 50px;
+    border-radius: 6px;
+    background: #61dafb;
+    cursor: pointer;
+    margin-left: 55px;
+}
